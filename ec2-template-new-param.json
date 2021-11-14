@@ -2,6 +2,7 @@
   "Parameters" : {
     "KeyName" : "chrome92win",
 	"Ec2SecurityGroup" : "launch-wizard-1",
-	"AMIID" : "ami-0e46a6101ab6c2e22"
+	"AMIID" : "ami-0e46a6101ab6c2e22",
+	"FallbackAMIID" : "ami-0e46a6101ab6c2e22"
   }
 }  
