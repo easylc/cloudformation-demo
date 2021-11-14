@@ -1,0 +1,28 @@
+{
+"AWSTemplateFormatVersion": "2010-09-09",
+"Parameters" : {
+  "KeyName" : {
+    "Type" : "String",
+    "Description" : "KeyName"
+  },
+  "Ec2SecurityGroup" : {
+    "Type" : "String",
+    "Description" : "Ec2SecurityGroup"
+  },
+  "AMIID" : {
+    "Type" : "String",
+    "Description" : "AMIID"
+  }
+},
+"Resources" : {
+    "Ec2Instance" : {
+      "Type" : "AWS::EC2::Instance", 
+      "Properties" : {
+        "ImageId" : { "Ref" : "AMIID" },
+        "KeyName" : { "Ref" : "KeyName" },
+        "InstanceType" : "t4g.micro",
+        "SecurityGroups" : [{ "Ref" : "Ec2SecurityGroup" }]
+      }
+    }
+  }
+}
